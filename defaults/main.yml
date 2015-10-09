@@ -1,2 +1,4 @@
-host: 'log2'
-port: '61000'
+host: "log2"
+port: "61000"
+cafile: "/etc/papertrail-bundle.pem"
+facility: "local0"

@@ -7,7 +7,7 @@
 - name: modify certificates
   copy:
     src: papertrail-bundle.pem
-    dest: /etc/papertrail-bundle.pem
+    dest: "{{ cafile }}"
     owner: root
     group: root
     mode: 0644
