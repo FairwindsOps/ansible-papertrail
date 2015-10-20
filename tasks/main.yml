@@ -15,8 +15,8 @@
 
 - name: modify rsyslog config
   template:
-    src: 60-papertrail.conf
-    dest: /etc/rsyslog.d/60-papertrail.conf
+    src: papertrail.conf
+    dest: /etc/rsyslog.d/papertrail.conf
     owner: root
     group: root
     mode: 0644
