@@ -4,6 +4,7 @@ Ubuntu 14.04 LTS
 ## Synopsis
 
 Adds rsyslog config for [papertrail](https://papertrailapp.com/).
+
 Use TLS orver TCP.
 
 ## Requirements
