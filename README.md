@@ -13,11 +13,11 @@ Use TLS orver TCP.
 
 ## Variables
 
-| parameter | required | default | choices | comments |
-| --- | --- | --- | --- | --- |
-| papertrail_host | yes |  |  |  |
-| papertrail_port | yes |  |  |  |
-| papertrail_syslog_facility | yes | local7 |  |  |
+| parameter | required | default | comments |
+| --- | --- | --- | --- |
+| papertrail_host | yes |  |  |
+| papertrail_port | yes |  |  |
+| papertrail_syslog_facility | yes | local7 |  |
 
 ## Examples
 
