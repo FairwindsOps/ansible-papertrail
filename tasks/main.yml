@@ -1,7 +1,7 @@
 - name: install rsyslog-gnutls
   apt:
     name: rsyslog-gnutls
-    state: latest
+    state: present
     force: yes
 
 - name: modify certificates

@@ -1,9 +1,7 @@
-# ansible-role-papertrail
-Ubuntu 14.04 LTS
+# README.md
+# Ansible Role: mats116.papertrail
 
-## Synopsis
-
-Adds rsyslog config for [papertrail](https://papertrailapp.com/).
+An Ansible role that configure rsyslog for **[papertrail](https://papertrailapp.com/)** on **Ubuntu 14.04 LTS**
 
 Use TLS orver TCP.
 
@@ -11,22 +9,27 @@ Use TLS orver TCP.
 
 - rsyslog
 
-## Variables
+## Role Variables
 
-| parameter | required | default | comments |
-| --- | --- | --- | --- |
-| papertrail_host | yes |  |  |
-| papertrail_port | yes |  |  |
-| papertrail_syslog_facility | yes | local7 |  |
+Available variables are listed below, along with default values:
 
-## Examples
+papertrail_host:
+papertrail_port:
+papertrail_syslog_facility: local7
 
-```yaml:paybook.yaml
-- hosts: all
-  sudo: yes
-  roles:
-    - role: papertrail
-      papertrail_host: log2
-      papertrail_port: 29731
-      papertrail_syslog_facility: local3
-```
+## Dependencies
+
+none
+
+## Example Playbook
+
+    - hosts: web-server
+      roles:
+        - role: mats116.papertrail
+          papertrail_host: log2
+          papertrail_port: 29731
+          papertrail_syslog_facility: local3
+
+## License
+
+MIT

@@ -1,1 +1,13 @@
-dependencies:
+galaxy_info:
+  author: mats116
+  description: "Rsyslog configure for papertrail"
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+  galaxy_tags:
+    - papertrail
+    - rsyslog
+dependencies: []
