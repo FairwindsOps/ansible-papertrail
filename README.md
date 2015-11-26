@@ -13,9 +13,9 @@ Use TLS orver TCP.
 
 Available variables are listed below, along with default values:
 
-papertrail_host:
-papertrail_port:
-papertrail_syslog_facility: local7
+    papertrail_host:
+    papertrail_port:
+    papertrail_syslog_facility: local7
 
 ## Dependencies
 
