@@ -13,9 +13,11 @@ Use TLS orver TCP.
 
 Available variables are listed below, along with default values:
 
-    papertrail_host:
-    papertrail_port:
-    papertrail_syslog_facility: local7
+```yaml
+papertrail_host:
+papertrail_port:
+papertrail_syslog_facility: local7
+```
 
 ## Dependencies
 
@@ -23,12 +25,14 @@ none
 
 ## Example Playbook
 
-    - hosts: web-server
-      roles:
-        - role: mats116.papertrail
-          papertrail_host: log2
-          papertrail_port: 29731
-          papertrail_syslog_facility: local3
+```yaml
+- hosts: web-server
+  roles:
+    - role: mats116.papertrail
+      papertrail_host: log2
+      papertrail_port: 29731
+      papertrail_syslog_facility: local3
+```
 
 ## License
 
