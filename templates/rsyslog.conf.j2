@@ -1,0 +1,22 @@
+$ModLoad imuxsock # provides support for local system logging
+$ModLoad imklog   # provides kernel logging support
+$KLogPermitNonKernelFacility on
+
+template(name="CustomTemplate" type="string"
+        string="%TIMESTAMP:::date-rfc3339% {{papertrail_rsyslog_hostname}} %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf% :{{papertrail_unique_identifier}}\n"
+       )
+
+$ActionFileDefaultTemplate CustomTemplate
+$ActionForwardDefaultTemplate CustomTemplate
+
+$RepeatedMsgReduction on
+$FileOwner syslog
+$FileGroup adm
+$FileCreateMode 0640
+$DirCreateMode 0755
+$Umask 0022
+$PrivDropToUser syslog
+$PrivDropToGroup syslog
+$WorkDirectory /var/spool/rsyslog
+
+$IncludeConfig /etc/rsyslog.d/*.conf
