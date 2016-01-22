@@ -1,1 +1,3 @@
 papertrail_syslog_facility: local7
+papertrail_rsyslog_hostname: ''
+papertrail_unique_identifier: ''

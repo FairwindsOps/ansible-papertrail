@@ -13,7 +13,16 @@
     mode: 0644
   notify: restart rsyslog
 
-- name: modify rsyslog config
+- name: copy rsyslog.conf
+  template:
+    src: rsyslog.conf.j2
+    dest: /etc/rsyslog.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart rsyslog
+
+- name: copy papertrail.conf
   template:
     src: papertrail.conf
     dest: /etc/rsyslog.d/papertrail.conf
