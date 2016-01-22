@@ -3,7 +3,7 @@ $ModLoad imklog   # provides kernel logging support
 $KLogPermitNonKernelFacility on
 
 template(name="CustomTemplate" type="string"
-        string="%TIMESTAMP:::date-rfc3339% {{papertrail_rsyslog_hostname}} %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf% :{{papertrail_unique_identifier}}\n"
+        string="%TIMESTAMP:::date-rfc3339% {% if papertrail_rsyslog_hostname %}{{papertrail_rsyslog_hostname}}{% else %}%HOSTNAME%{% endif %} %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%{% if papertrail_unique_identifier %} :{{papertrail_unique_identifier}}{% endif -%}\n"
        )
 
 $ActionFileDefaultTemplate CustomTemplate
